@@ -10,9 +10,29 @@ package pdo;
  * @author IreneJose
  */
 public class Fecha {
-    int dia;
-    int mes;
-    int año;
+    private int dia;
+    private int mes;
+    private int año;
+    
+    public int getDia(){
+        return this.dia;
+    }
+   public void setDia(Fecha dia) {
+        this.dia = dia;
+    }
+    public int getMes(){
+      return this.mes;
+    }
+    public void setMes(Fecha mes) {
+        this.mes = mes;
+    }
+    public int getAño(){
+        return this.año;
+    }
+   public void setAño(Fecha año) {
+        this.año = año;
+    }
+    
  //------------------------------------------------------------------------------Método para ajustar la fecha a parámetros reales----------------------   
 public  String ajusteRealista(int dia,int mes,int año){
     
@@ -90,16 +110,35 @@ public  String ajusteRealista(int dia,int mes,int año){
 }
 //-------------------------------------------------------------------------------------Método para saber cuál es el año mayor----------------------------
     public  void mayorQue(int dia,int mes,int año,int dia2,int mes2,int año2){
-        String fecha1=(dia+"/"+mes+"/"+año);
-        String fecha2=(dia2+"/"+mes2+"/"+año2);
+        String fecha1=(f1.getDia+"/"+f1.getMes+"/"+f1.getAño);
+        String fecha2=(f2.getDia+"/"+f2.getMes+"/"+f2.getAño2);
         
-        if(año>año2){
+        if(f1.getAño>f2.getAño){
             System.out.println("La fecha mayor es: "+fecha1);
         }
-        if(año<año2){
+        if(f1.Año<f2.Año2){
             System.out.println("La fecha mayor es: "+fecha2);
         }
-        
+        if(f1.getAño==f2.getAño){
+            if(f1.getMes>f2.getMes){
+                System.out.println("La fecha mayor es: "+fecha1);
+            }
+            if(f1.getMes<f2.getMes){
+                System.out.println("La fecha mayor es: "+fecha2);
+            }
+            if(f1.getMes==f2.getMes){
+                if(f1.getDia>f2.getDia){
+                      System.out.println("La fecha mayor es: "+fecha1);
+                }
+                if(f1.getDia<f2.getDia){
+                      System.out.println("La fecha mayor es: "+fecha2);
+                }
+                if(f1.getDia==f2.getDia){
+                    System.out.println("Las dos fechas son iguales");
+                }
+            }
+        }
       
     }
 }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------

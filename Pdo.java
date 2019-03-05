@@ -30,9 +30,9 @@ public class Pdo {
         int año= sr.nextInt();
         
         Fecha f1=new Fecha();
-        f1.dia= dia;
-        f1.mes=mes;
-        f1.año=año;
+        f1.setDia(dia);
+        f1.setMes(mes);
+        f1.setAño(año);
         
         
          System.out.println("Introduzca un dia del mes: ");
@@ -45,13 +45,13 @@ public class Pdo {
          Scanner cr=new Scanner (System.in);
         int año2= cr.nextInt();
         Fecha f2=new Fecha();
-         f2.dia= dia2;
-        f2.mes=mes2;
-        f2.año=año2;
+         f2.setDia(dia2);
+        f2.setMes(mes2);
+        f2.setAño(año2);
         
         System.out.println(f1.ajusteRealista(dia,mes,año));  
         System.out.println(f2.ajusteRealista(dia2, mes2, año2));
-         System.out.println(mayorQue(dia, mes, año, dia2, mes2, año2));     
+         //System.out.println(mayorQue(dia, mes, año, dia2, mes2, año2));     
     }
     
 }
